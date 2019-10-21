@@ -3,6 +3,8 @@
 
 // Example:
 lArray = [1 ,9 ,5 ,2 , 0, 7, 6, 8];
+
+// Basic Bubble Sort
 const bubble = function(lArray){
     for( let i = 0; i < lArray.length - 1; i++){
         for(let j = 0; j < lArray.length - i - 1 ; j++){
@@ -16,6 +18,7 @@ const bubble = function(lArray){
     return lArray;
 }
 
+// Optimized: Stop when no element swapped. 
 const optimizedBubble = function(lArray){
     for( let i = 0; i < lArray.length - 1; i++){
         var flag = true;
