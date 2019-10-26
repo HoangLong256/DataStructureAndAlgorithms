@@ -21,5 +21,25 @@ const selection = (lArray)=>{
     }
 }
 
-selection(lArray);
+// selection(lArray);
 
+// Selection Sort using recursion
+const recursionSelection = (lArray, index)=>{
+    if(index === lArray.length - 1){
+        console.log();
+        console.log(lArray);
+        return lArray;
+    }else{
+        var initial_index = index;
+        var smallest_index= index;
+        for(var  i = index; i < lArray.length; i++){
+            if(lArray[smallest_index] > lArray[i]){
+                smallest_index = i;
+            }
+        }
+        console.log(lArray); 
+        swap(lArray, smallest_index, initial_index);
+        recursionSelection(lArray, index + 1)
+    }
+}
+recursionSelection(lArray, 0)
