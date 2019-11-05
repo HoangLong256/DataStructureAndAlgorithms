@@ -1,8 +1,8 @@
 // Merge Function
 // Complexity: n * log(n)
-lArray1 = [3, 27, 38, 43];
-lArray2 = [9, 10, 82];
-lArray = [38,27,43,3,9,82,10];
+var lArray1 = [3, 27, 38, 43];
+var lArray2 = [9, 10, 82];
+const lArray = [38,27,43,3,9,82,10];
 const merge = function(lArray1, lArray2){
     var len1 = lArray1.length;
     var len2 = lArray2.length;
@@ -32,7 +32,7 @@ const merge = function(lArray1, lArray2){
         }
         
     }
-    //console.log(result);
+    console.log(result)
     return result;
 }
 
@@ -43,12 +43,13 @@ const sort = function(lArray){
     }
     var left = lArray.splice(0, lArray.length/2)
     var right = lArray
-    var sortL = sort(left)
-    var sortR = sort(right)
-    console.log("Sort Left " + sortL);
-    console.log("Sort Right " + sortR);
-    console.log("")
-    merge(sort(left), sort(right))
+    // var sortL = sort(left)
+    // var sortR = sort(right)
+    // console.log("Sort Left " + sortL);
+    // console.log("Sort Right " + sortR);
+    // console.log("")
+    return merge(sort(left), sort(right))
 }
 //merge(lArray1, lArray2)
 var avc = sort(lArray);
+console.log(avc)
