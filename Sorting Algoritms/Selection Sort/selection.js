@@ -1,3 +1,9 @@
+// Selection Sort: The selection sort algorithm sorts 
+// an array by repeatedly finding the minimum element (considering ascending order) 
+// from unsorted part and putting it at the beginning.
+
+// Complexity: O(n^2)
+
 const lArray = [5,2,7,4,9,8];
 
 const swap = (a1, leftIndex, rightIndex)=>{
@@ -26,7 +32,6 @@ const selection = (lArray)=>{
 // Selection Sort using recursion
 const recursionSelection = (lArray, index)=>{
     if(index === lArray.length - 1){
-        console.log();
         console.log(lArray);
         return lArray;
     }else{
@@ -37,7 +42,6 @@ const recursionSelection = (lArray, index)=>{
                 smallest_index = i;
             }
         }
-        console.log(lArray); 
         swap(lArray, smallest_index, initial_index);
         recursionSelection(lArray, index + 1)
     }
